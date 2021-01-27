@@ -19,7 +19,7 @@ var backBtn = document.querySelector("#backBtn");
 var clearBtn = document.querySelector("#clearBtn");
 var start = document.querySelector(".start");
 
-//Starting positions, timer length
+
 var timeLeft = questionBank.length * 15;
 var q = 0;
 var s = 0;
@@ -29,7 +29,7 @@ var timeInterval;
 
 getScore();
 
-// Timer Function
+
 function timer() {
   timeInterval = setInterval(function () {
     timeLeft--;
@@ -42,7 +42,7 @@ function timer() {
   }, 1000);
 }
 
-// Questions from questions.js
+
 function displayQA() {
   if (q < questionBank.length) {
     question.textContent = questionBank[q].question;
@@ -55,7 +55,7 @@ function displayQA() {
   }
 }
 
-// if-else statement for answer comparison (right/wrong)
+
 function compareAnswer(event) {
   if (q >= questionBank.length) {
     gameOver();
@@ -73,7 +73,7 @@ function compareAnswer(event) {
   }
 }
 
-// Getting scores from local storage
+
 function getScore() {
   var storedScore = JSON.parse(localStorage.getItem("highScore"));
   if (storedScore !== null) {
@@ -81,12 +81,11 @@ function getScore() {
   }
 }
 
-// Function to save score to localStorage
+
 function saveScore() {
   localStorage.setItem("highScore", JSON.stringify(scoreList));
 }
 
-// Display and Hide items on page for clean display
 function gameOver() {
   scoreBtn.innerHTML = score;
   scoreBtn.style.display = "inline-block";
@@ -97,7 +96,7 @@ function gameOver() {
   leaderBoard();
 }
 
-// Top 10 scores
+
 function leaderBoard() {
   removeFromLeaderBoard();
   addToLeaderBoard();
@@ -120,14 +119,13 @@ function leaderBoard() {
   }
 }
 
-// Adds player Initials to Leaderboard
 function addToLeaderBoard() {
   leaderBoardDiv = document.createElement("div");
   leaderBoardDiv.setAttribute("id", "playerInitials");
   document.getElementById("leaderBoard").appendChild(leaderBoardDiv);
 }
 
-// Removes player(s) from Leaderboard
+
 function removeFromLeaderBoard() {
   var removeScores = document.getElementById("playerInitials");
   if (removeScores !== null) {
@@ -136,7 +134,6 @@ function removeFromLeaderBoard() {
   }
 }
 
-// Event listeners
 beginQuiz.addEventListener("click", function (event) {
   timer();
   displayQA();

@@ -56,7 +56,7 @@ var questionBank = [
       answer: "Hypertext Markup Language",
     },
   
-    // Question 6
+   
     {
       question: "What is the correct format for a 'comment' in HTML?",
       selection: [
@@ -68,7 +68,7 @@ var questionBank = [
       answer: "<!-- comment -->",
     },
   
-    // Question 7
+   
     {
       question:
         "What index number is Kansas City Chiefs? var nflTeams = ['Los Angeles Rams', 'Chicago Bears', 'Philadelphia Eagles', 'Kansas City Chiefs']",
@@ -76,7 +76,7 @@ var questionBank = [
       answer: "3",
     },
   
-    // Question 8
+ 
     {
       question: "What function gets you a random math number?",
       selection: [
@@ -88,7 +88,7 @@ var questionBank = [
       answer: "Math.random();",
     },
   
-    // Question 9
+ 
     {
       question:
         "String values must be enclosed within ____ when being assigned to variables.",
@@ -96,7 +96,7 @@ var questionBank = [
       answer: "quotes",
     },
   
-    // Question 10
+
     {
       question:
         "Which of the following are examples of JavaScript variable data types?",
